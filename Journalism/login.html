@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+
+    </title>
+
+    <script src="scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+            $("#deglu").click(function () {
+
+                $.post(
+                "ashx/UserLogin.ashx",
+                {
+                    Name: $("#username").val(),
+                    PassWord: $("#pwd").val()
+                },
+
+                function (data, status) {
+                
+                    alert($("#username").val());
+                    if (status == "success") {
+
+
+                        if (data == $("#username").val()) {
+                            alert("登录成功");
+                            window.location.href = "background.htm";
+
+                        }
+
+                    } else {
+                        alert("登录失败");
+                    }
+
+                }
+
+          );
+            })
+
+
+        })
+    </script>
+    <style type="text/css">
+        body {
+            position: relative;
+            width: 30%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 105px;
+            color: #606060;
+            font-size: 12px;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+
+    <table width="385" height="220" background="../Images/User_Login_206.gif">
+        <tr>
+            <td height="54"></td>
+        </tr>
+        <tr>
+            <td align="right" width="120" height="30">
+                用户名:
+            </td>
+            <td style="height: 5px">
+                <input name="username" type="text" id="username" style="width:150px;" />
+            </td>
+        </tr>
+        <tr>
+            <td align="right" height="30px">
+                密&nbsp;&nbsp;&nbsp;码:
+            </td>
+            <td>
+                <input name="pwd" type="password" id="pwd" style="width:150px;" />
+            </td>
+        </tr>
+    </table>
+    <br />
+    <p style="width: 385px">
+        <input type="button" name="submit" value="登录" id="deglu" style="width:74px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" name="cancel" value="取消" id="cancel" style="width:74px;" />
+    </p>
+
+</body>
+</html>

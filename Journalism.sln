@@ -5,6 +5,14 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Journalism", "Journalism\Journalism.csproj", "{D82CB6FB-A92A-42C7-94DC-16D3488A2B4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JournalismBLL", "journalismBLL\JournalismBLL.csproj", "{6E398642-A5B3-4296-A132-47F043EEAE0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JournalismDAL", "journalismDAL\JournalismDAL.csproj", "{0894D98E-56D3-4981-8377-85C07796735B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JournalismCommon", "JournalismCommon\JournalismCommon.csproj", "{4DB83274-2D66-47D3-B086-D65320EA12CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JournalismModel", "JournalismModel\JournalismModel.csproj", "{492809A5-E602-4B24-B9C4-130840951AAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{D82CB6FB-A92A-42C7-94DC-16D3488A2B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D82CB6FB-A92A-42C7-94DC-16D3488A2B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D82CB6FB-A92A-42C7-94DC-16D3488A2B4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E398642-A5B3-4296-A132-47F043EEAE0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E398642-A5B3-4296-A132-47F043EEAE0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E398642-A5B3-4296-A132-47F043EEAE0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E398642-A5B3-4296-A132-47F043EEAE0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0894D98E-56D3-4981-8377-85C07796735B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0894D98E-56D3-4981-8377-85C07796735B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0894D98E-56D3-4981-8377-85C07796735B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0894D98E-56D3-4981-8377-85C07796735B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DB83274-2D66-47D3-B086-D65320EA12CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DB83274-2D66-47D3-B086-D65320EA12CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DB83274-2D66-47D3-B086-D65320EA12CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DB83274-2D66-47D3-B086-D65320EA12CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{492809A5-E602-4B24-B9C4-130840951AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{492809A5-E602-4B24-B9C4-130840951AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{492809A5-E602-4B24-B9C4-130840951AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{492809A5-E602-4B24-B9C4-130840951AAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

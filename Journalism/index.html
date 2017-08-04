@@ -1,0 +1,427 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        新闻发布系统
+    </title>
+    <link rel="Stylesheet" type="text/css" href="css/Style.css" />
+    <script src="scripts/jquery-3.1.1.js">
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $.post(
+                "ashx/GetNewsCategories.ashx",
+            {
+            },
+            function (data, status) {
+                if (status == "success") {
+
+                    $("#shisxw").html(data)
+                }
+            }
+          )
+
+
+
+            $.post(
+              "ashx/GetNewsRound.ashx",
+          {
+          },
+          function (data, status) {
+              if (status == "success") {
+
+                  $("#hqjh").html(data)
+              }
+          }
+        )
+
+
+
+
+            $.post(
+                "ashx/GetNewsScience.ashx",
+            {
+            },
+            function (data, status) {
+                if (status == "success") {
+
+                    $("#kxjs").html(data)
+                }
+            }
+          )
+
+
+
+            $.post(
+           "ashx/GetNewsMilitary.ashx",
+       {
+       },
+       function (data, status) {
+           if (status == "success") {
+
+               $("#jssj").html(data)
+           }
+       }
+     )
+
+
+            $.post(
+         "ashx/GetNewsCommunity.ashx",
+         {
+         },
+         function (data, status) {
+             if (status == "success") {
+
+                 $("#shbt").html(data)
+             }
+         }
+         )
+
+            $.post(
+      "ashx/GetNewsSports.ashx",
+      {
+      },
+      function (data, status) {
+          if (status == "success") {
+
+              $("#tysj").html(data)
+          }
+      }
+      )
+            $.post(
+    "ashx/GetNewsRecreation.ashx",
+    {
+    },
+    function (data, status) {
+        if (status == "success") {
+
+            $("#ylzy").html(data)
+        }
+    }
+    )
+
+
+            $.post(
+       "ashx/GetNewsManage.ashx",
+    {
+    },
+    function (data, status) {
+    if (status == "success") {
+
+        $("#shlc").html(data)
+    }
+    }
+    )
+
+     })
+
+    </script>
+
+
+
+    <script>
+        $(function () {
+            $("#btnSearch").click(function () {
+                var title = $("#title").val();
+                var value = $("#sele").val();
+               
+                window.location.href = "index1.html";
+                localStorage.setItem("title",title);
+                localStorage.setItem("value", value);
+              
+
+            })         
+        })
+    </script>
+
+
+    <script>
+        $(function () {
+            $("#atr a").click(function () {
+
+                alert($(this).text());
+                var lx = $(this).text();
+                window.location.href = "index1.html";
+                localstorage.setitem("value", lx);
+
+            })
+        })
+    </script>
+
+
+
+    <script>
+        $(function () {
+            $('body').on('click', '#lbtnTitle', function () {
+                var bt = $(this).text();
+                window.location.href = "Content.html";
+                localStorage.setItem("value", bt);
+            })
+        })
+    </script>
+
+
+
+
+
+
+</head>
+<body class="tempbody">
+    <div class="tbody">
+
+        <style type="text/css">
+            .td1 {
+                height: 35px;
+                width: 19%;
+                font-size: 12px;
+            }
+
+            .td2 {
+                width: 9%;
+                height: 35px;
+                font-size: 15px;
+            }
+        </style>
+        <table style="width :100%">
+            <tr>
+                <td colspan="10">
+                    <div class="wishTop">
+
+                        <div class="titleSystemName">
+                            新闻发布系统
+                        </div>
+                        <div class="bglogo">
+                            <img id="ctl00_head_Image1" src="Images/logo.gif" style="border-width:0px;" />
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr style="background-image: url(Images/b4_bg.gif)" id="atr">
+                <td class="td1 ">
+                    <span id="ctl00_head_dateLabel" style="color: #FFFFFF">今天是：2017年08月03日</span>
+                </td>
+                <td class="td2 ">
+                    <a id="na" href="" style="color:Black;text-decoration:none;font-weight: 800; color: #FFFFFF;" >首页</a>
+                </td>
+                <td class="td2 ">
+                    <a id="ct2" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">时事新闻</a>
+                </td>
+                <td class="td2 ">
+                    <a id="ct3" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">环球经济</a>
+                </td>
+                <td class="td2 ">
+                    <a id="ct4" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">军事世界</a>
+                </td>
+                <td class="td2 ">
+                    <a id="ct5" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">科学技术</a>
+                </td>
+                <td class="td2 ">
+                    <a id="ct6" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">生活理财</a>
+                </td>
+                <td class="td2 ">
+                    <a id="c7" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">社会百态</a>
+                </td>
+                <td class="td2 ">
+                    <a id="ct8" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">世界体育</a>
+                </td>
+                <td class="td2 ">
+                    <a id="ct9" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">娱乐综艺</a>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 25px; font-size: 12px" colspan="10">
+                    <p>
+                        
+                     
+
+                            <span style="text-align: left;">
+                                输入关键字：
+                                <input name="title" type="text" id="title" style="width:173px;" />
+                                <select name="ctl00$head$ddlCategories" id="sele" style="width:80px;">
+                                    <option value="时事新闻">时事新闻</option>
+                                    <option value="环球经济">环球经济</option>
+                                    <option value="军事世界">军事世界</option>
+                                    <option value="科学技术">科学技术</option>
+                                    <option value="生活理财">生活理财</option>
+                                    <option value="社会百态">社会百态</option>
+                                    <option value="世界体育">世界体育</option>
+                                    <option value="娱乐综艺">娱乐综艺</option>
+
+                                </select>
+
+
+                                <input type="submit" name="btnSearch" value="搜索" id="btnSearch" />
+                            </span>
+                            <span style="float:right;">
+                                <a href="#">
+                                    加入收藏
+                                </a> &nbsp;<a href="#">设为主页</a>
+                                <a id="Login" href="login.html">后台管理</a>
+                            </span>
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <table width="100%">
+        <tr>
+            <td class="dtd1">
+                <table class="dtab1" id="ssnews">
+                    <tr class="dtr1">
+                        <td colspan="2">
+                            <b>&nbsp;&nbsp;时事新闻</b>
+                            <div class="more ">
+                                <a id="ctl00_ContentPlaceHolder1_HyperLink1" href="ShowNewsInformation.aspx?id=1" style="font-weight:normal;">更多</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table id="shisxw" cellspacing="0" cellpadding="3" rules="all" border="1" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;height:136px;border-collapse:collapse;"></table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td class="dtd1">
+                <table class="dtab1 ">
+                    <tr class="dtr1 ">
+                        <td colspan="2">
+                            <b>&nbsp;&nbsp;环球经济</b>
+                            <div class="more ">
+                                <a id="ctl00_ContentPlaceHolder1_HyperLink2" href="ShowNewsInformation.aspx?id=2" style="font-weight:normal;">更多</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table id="hqjh" cellspacing="0" cellpadding="3" rules="all" border="1" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;height:136px;border-collapse:collapse;"></table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="dtd1">
+                <table class="dtab1 ">
+                    <tr class="dtr1 ">
+                        <td colspan="2">
+                            <b>&nbsp;&nbsp;科学技术</b>
+                            <div class="more ">
+                                <a id="ctl00_ContentPlaceHolder1_HyperLink3" href="ShowNewsInformation.aspx?id=4" style="font-weight:normal;text-align: right">更多</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table id="kxjs" cellspacing="0" cellpadding="3" rules="all" border="1" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;height:136px;border-collapse:collapse;"></table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td class="dtd1">
+                <table class="dtab1 ">
+                    <tr class="dtr1 ">
+                        <td colspan="2">
+                            <b >&nbsp;&nbsp;军事世界</b>
+                            <div class="more ">
+                                <a id="ctl00_ContentPlaceHolder1_HyperLink4" href="ShowNewsInformation.aspx?id=3" style="font-weight:normal;text-align: right">更多</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table id="jssj" cellspacing="0" cellpadding="3" rules="all" border="1" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;height:136px;border-collapse:collapse;"></table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="dtd1">
+                <table class="dtab1 ">
+                    <tr class="dtr1 ">
+                        <td colspan="2">
+                            <b>&nbsp;&nbsp;社会百态</b>
+                            <div class="more ">
+                                <a id="ctl00_ContentPlaceHolder1_dlstSocial" href="ShowNewsInformation.aspx?id=6" style="font-weight:normal;text-align: right">更多</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table id="shbt" cellspacing="0" cellpadding="3" rules="all" border="1" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;height:136px;border-collapse:collapse;"></table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td class="dtd1">
+                <table class="dtab1 ">
+                    <tr class="dtr1 ">
+                        <td colspan="2">
+                            <b>&nbsp;&nbsp;世界体育</b>
+                            <div class="more ">
+                                <a id="ctl00_ContentPlaceHolder1_HyperLink6" href="ShowNewsInformation.aspx?id=7" style="font-weight:normal;">更多</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table id="tysj" cellspacing="0" cellpadding="3" rules="all" border="1" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;height:136px;border-collapse:collapse;"></table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="dtd1">
+                <table class="dtab1 ">
+                    <tr class="dtr1 ">
+                        <td colspan="2">
+                            <b>&nbsp;&nbsp;娱乐综艺</b>
+                            <div class="more ">
+                                <a id="ctl00_ContentPlaceHolder1_HyperLink3" href="ShowNewsInformation.aspx?id=4" style="font-weight:normal;text-align: right">更多</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table id="ylzy" cellspacing="0" cellpadding="3" rules="all" border="1" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;height:136px;border-collapse:collapse;"></table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td class="dtd1">
+                <table class="dtab1 ">
+                    <tr class="dtr1 ">
+                        <td colspan="2">
+                            <b>&nbsp;&nbsp;生活理财</b>
+                            <div class="more ">
+                                <a id="ctl00_ContentPlaceHolder1_HyperLink4" href="ShowNewsInformation.aspx?id=3" style="font-weight:normal;text-align: right">更多</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table id="shlc" cellspacing="0" cellpadding="3" rules="all" border="1" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;height:136px;border-collapse:collapse;"></table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br />
+
+    <div class="footer">
+
+        <p>
+            Copyright © 2007-2010
+        </p><p>
+            <strong>版权所有&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 违者必究</strong>
+        </p>
+
+    </div>
+</body>
+</html>

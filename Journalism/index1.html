@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Untitled Page
+    </title>
+    <link rel="Stylesheet" type="text/css" href="css/Style.css" />
+    <script src="scripts/jquery-3.1.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            
+            $.post(
+                  "ashx/GetNewsType.ashx",
+                  {
+                      title: localStorage.getItem("title"),
+                      type: localStorage.getItem("value")
+                  },
+                 
+                  function (data, status) {
+                      if (status == "success") {
+                          
+                          $("#tb").html(data)
+
+                      }
+                      $("#sp").text(localStorage.getItem("value"));
+                     
+                  }                                       
+            );
+              
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $("#atr a").click(function () {
+            
+                alert($(this).text());
+                var lx = $(this).text();
+                var title = "";
+                window.location.href = "index1.html";
+                localStorage.setItem("value", lx);
+                localStorage.setItem("title", title);
+
+
+               
+            })
+        })
+    </script>
+   
+
+</head>
+<body class="tempbody">
+        <div class="tbody">
+
+            <style type="text/css">
+                .td1 {
+                    height: 35px;
+                    width: 19%;
+                    font-size: 12px;
+                }
+
+                .td2 {
+                    width: 9%;
+                    height: 35px;
+                    font-size: 15px;
+                }
+            </style>
+            <table style="width :100%">
+                <tr>
+                    <td colspan="10">
+                        <div class="wishTop">
+
+                            <div class="titleSystemName">
+                                新闻发布系统
+                            </div>
+                            <div class="bglogo">
+                                <img id="ctl00_head_Image1" src="Images/logo.gif" style="border-width:0px;" />
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="background-image: url(Images/b4_bg.gif)" id="atr">
+                    <td class="td1 ">
+                        <span id="ctl00_head_dateLabel" style="color: #FFFFFF">今天是：2017年08月03日</span>
+                    </td>
+                    <td class="td2 ">
+                        <a id="na" href="index.html" style="color:Black;text-decoration:none;font-weight: 800; color: #FFFFFF;">首页</a>
+                    </td>
+                    <td class="td2 ">
+                        <a id="ct2" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">时事新闻</a>
+                    </td>
+                    <td class="td2 ">
+                        <a id="ct3" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">环球经济</a>
+                    </td>
+                    <td class="td2 ">
+                        <a id="ct4" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">军事世界</a>
+                    </td>
+                    <td class="td2 ">
+                        <a id="ct5" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">科学技术</a>
+                    </td>
+                    <td class="td2 ">
+                        <a id="ct6" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">生活理财</a>
+                    </td>
+                    <td class="td2 ">
+                        <a id="c7" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">社会百态</a>
+                    </td>
+                    <td class="td2 ">
+                        <a id="ct8" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">世界体育</a>
+                    </td>
+                    <td class="td2 ">
+                        <a id="ct9" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">娱乐综艺</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 25px; font-size: 12px" colspan="10">
+                        <p>
+                            <span style="text-align: left;">
+                                输入关键字：
+                                <input name="title" type="text" id="title" style="width:173px;" />
+                             
+                                <input type="submit" name="btnSearch" value="搜索" id="btnSearch" />
+                            </span>
+                            <span style="float:right;">
+                                <a href="#" >
+                                    加入收藏
+                                </a> &nbsp;<a href="#" >设为主页</a>
+                                <a id="login" href="#">后台管理</a>
+                            </span>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <table width="100%">
+            <tr style="background-image: url(Images/b4_bg.gif)">
+                <td colspan="2" style="text-align: left; padding-left: 15px;">
+                    <span>
+                        <span id="sp" style="font-weight: 700; color: #FFFFFF; font-size: large;">时事新闻</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 5px;"></td>
+            </tr>
+            <tr>
+                <td>
+                    <table id="tb" cellspacing="0" cellpadding="3" rules="all" border="1" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;border-collapse:collapse;">
+                     
+                             
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+   
+        <br />
+
+        <div class="footer">
+
+            <p>
+                Copyright © 2007-2010
+            </p><p>
+                <strong>版权所有&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 违者必究</strong>
+            </p>
+
+        </div>
+</body>
+</html>

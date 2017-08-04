@@ -43,6 +43,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -66,7 +94,128 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="background.htm" />
+    <Content Include="Content.html" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\addNote.gif" />
+    <Content Include="Images\bg.gif" />
+    <Content Include="Images\bg.jpg" />
+    <Content Include="Images\bg_banner_menu.gif" />
+    <Content Include="Images\bg_button_blue.gif" />
+    <Content Include="Images\bg_button_del.gif" />
+    <Content Include="Images\bg_button_update.gif" />
+    <Content Include="Images\bg_header.gif" />
+    <Content Include="Images\bg_left_bc.gif" />
+    <Content Include="Images\bg_left_bl.gif" />
+    <Content Include="Images\bg_left_br.gif" />
+    <Content Include="Images\bg_left_ls.gif" />
+    <Content Include="Images\bg_left_rs.gif" />
+    <Content Include="Images\bg_left_tc.gif" />
+    <Content Include="Images\bg_left_tl.gif" />
+    <Content Include="Images\bg_left_tr.gif" />
+    <Content Include="Images\bg_login.png" />
+    <Content Include="Images\bg_login_panel.gif" />
+    <Content Include="Images\bg_login_panel.png" />
+    <Content Include="Images\bg_nav.gif" />
+    <Content Include="Images\bg_rectbtn.png" />
+    <Content Include="Images\bg_schedule.gif" />
+    <Content Include="Images\bg_tabedbtn.gif" />
+    <Content Include="Images\bg_table_item.gif" />
+    <Content Include="Images\bg_table_item2.gif" />
+    <Content Include="Images\bg_th.gif" />
+    <Content Include="Images\bg_title.gif" />
+    <Content Include="Images\bg_tr.gif" />
+    <Content Include="Images\bg_users.gif" />
+    <Content Include="Images\delete.gif" />
+    <Content Include="Images\edit.gif" />
+    <Content Include="Images\index.css" />
+    <Content Include="Images\login.css" />
+    <Content Include="Images\login_main.png" />
+    <Content Include="Images\login_root.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\mail.gif" />
+    <Content Include="Images\main_fs.gif" />
+    <Content Include="Images\main_hb.gif" />
+    <Content Include="Images\main_hl.gif" />
+    <Content Include="Images\main_hl2.gif" />
+    <Content Include="Images\main_hr.gif" />
+    <Content Include="Images\main_lf.gif" />
+    <Content Include="Images\main_ls.gif" />
+    <Content Include="Images\main_rc.gif" />
+    <Content Include="Images\main_rf.gif" />
+    <Content Include="Images\main_rs.gif" />
+    <Content Include="Images\menu_seprator.gif" />
+    <Content Include="Images\minicalendar\minical_btnClose.gif" />
+    <Content Include="Images\minicalendar\minical_btnForward.gif" />
+    <Content Include="Images\minicalendar\minical_btnPrevious.gif" />
+    <Content Include="Images\minicalendar\minical_title.gif" />
+    <Content Include="Images\nav_back.gif" />
+    <Content Include="Images\nav_changePassword.gif" />
+    <Content Include="Images\nav_forward.gif" />
+    <Content Include="Images\nav_help.gif" />
+    <Content Include="Images\nav_pre.gif" />
+    <Content Include="Images\nav_print.gif" />
+    <Content Include="Images\nav_resetPassword.gif" />
+    <Content Include="Images\nav_search.gif" />
+    <Content Include="Images\note.gif" />
+    <Content Include="Images\public.css" />
+    <Content Include="Images\tree\arrow_collapsed - 复制.gif" />
+    <Content Include="Images\tree\arrow_collapsed.gif" />
+    <Content Include="Images\tree\arrow_collapsed_hover.gif" />
+    <Content Include="Images\tree\arrow_expanded.gif" />
+    <Content Include="Images\tree\arrow_expanded_hover.gif" />
+    <Content Include="Images\tree\branch_node.gif" />
+    <Content Include="Images\tree\btn_close.gif" />
+    <Content Include="Images\tree\btn_close.png" />
+    <Content Include="Images\tree\empty.gif" />
+    <Content Include="Images\tree\folder_closed.gif" />
+    <Content Include="Images\tree\folder_open.gif" />
+    <Content Include="Images\tree\root_node.gif" />
+    <Content Include="Images\tree\tree_node.gif" />
+    <Content Include="Images\tree\user_node.gif" />
+    <Content Include="index\EmployeeMgr.files\bg_users.gif" />
+    <Content Include="index\EmployeeMgr.htm" />
+    <Content Include="index\Left.files\bg_left_bl.gif" />
+    <Content Include="index\Left.files\bg_left_br.gif" />
+    <Content Include="index\Left.files\bg_left_tl.gif" />
+    <Content Include="index\Left.files\bg_left_tr.gif" />
+    <Content Include="index\Left.files\Tree.js" />
+    <Content Include="index\Left.files\TreeNode.js" />
+    <Content Include="index\Left.htm" />
+    <Content Include="index\Top.files\Clock.js" />
+    <Content Include="index\Top.files\mail.gif" />
+    <Content Include="index\Top.files\menu_seprator.gif" />
+    <Content Include="index\Top.files\nav_back.gif" />
+    <Content Include="index\Top.files\nav_changePassword.gif" />
+    <Content Include="index\Top.files\nav_forward.gif" />
+    <Content Include="index\Top.files\nav_help.gif" />
+    <Content Include="index\Top.files\nav_pre.gif" />
+    <Content Include="index\Top.files\nav_resetPassword.gif" />
+    <Content Include="index\Top.htm" />
     <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ashx\GetNewsCategories.ashx" />
+    <Content Include="ashx\GetNewsRound.ashx" />
+    <Content Include="ashx\GetNewsScience.ashx" />
+    <Content Include="ashx\GetNewsMilitary.ashx" />
+    <Content Include="ashx\GetNewsCommunity.ashx" />
+    <Content Include="ashx\GetNewsSports.ashx" />
+    <Content Include="ashx\GetNewsRecreation.ashx" />
+    <Content Include="ashx\GetNewsManage.ashx" />
+    <Content Include="ashx\GetNewsType.ashx" />
+    <Content Include="ashx\UserLogin.ashx" />
+    <Content Include="index\EmployeeMgr.files\ScriptResource%281%29.axd" />
+    <Content Include="index\EmployeeMgr.files\ScriptResource.axd" />
+    <Content Include="index\EmployeeMgr.files\WebResource.axd" />
+    <Content Include="RevampPassword.html" />
+    <Content Include="登录\default.gif" />
+    <Content Include="登录\login.css" />
+    <Content Include="登录\public.css" />
+    <Content Include="ashx\Top.ashx" />
+    <Content Include="ashx\RevampPassword.ashx" />
+    <Content Include="ashx\GetNewsContent.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,11 +224,84 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\Style.css" />
+    <Content Include="Images\3.gif" />
+    <Content Include="Images\4.gif" />
+    <Content Include="Images\5.gif" />
+    <Content Include="Images\6.gif" />
+    <Content Include="Images\7.gif" />
+    <Content Include="Images\b4_bg.gif" />
+    <Content Include="Images\bar.PNG" />
+    <Content Include="Images\down_bg.gif" />
+    <Content Include="Images\footer.gif" />
+    <Content Include="Images\head.jpg" />
+    <Content Include="Images\index.gif" />
+    <Content Include="Images\login_06.gif" />
+    <Content Include="Images\logo.gif" />
+    <Content Include="Images\more.gif" />
+    <Content Include="Images\table.png" />
+    <Content Include="Images\User_Login_206.gif" />
+    <Content Include="index.html" />
+    <Content Include="index1.html" />
+    <Content Include="login.html" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="scripts\jquery-3.1.1.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ashx\GetNewsCategories.ashx.cs">
+      <DependentUpon>GetNewsCategories.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\GetNewsCommunity.ashx.cs">
+      <DependentUpon>GetNewsCommunity.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\GetNewsContent.ashx.cs">
+      <DependentUpon>GetNewsContent.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\GetNewsManage.ashx.cs">
+      <DependentUpon>GetNewsManage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\GetNewsMilitary.ashx.cs">
+      <DependentUpon>GetNewsMilitary.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\GetNewsRecreation.ashx.cs">
+      <DependentUpon>GetNewsRecreation.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\GetNewsRound.ashx.cs">
+      <DependentUpon>GetNewsRound.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\GetNewsScience.ashx.cs">
+      <DependentUpon>GetNewsScience.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\GetNewsSports.ashx.cs">
+      <DependentUpon>GetNewsSports.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\GetNewsType.ashx.cs">
+      <DependentUpon>GetNewsType.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\RevampPassword.ashx.cs">
+      <DependentUpon>RevampPassword.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\Top.ashx.cs">
+      <DependentUpon>Top.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\UserLogin.ashx.cs">
+      <DependentUpon>UserLogin.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\journalismBLL\JournalismBLL.csproj">
+      <Project>{6e398642-a5b3-4296-a132-47f043eeae0e}</Project>
+      <Name>JournalismBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JournalismModel\JournalismModel.csproj">
+      <Project>{492809a5-e602-4b24-b9c4-130840951aab}</Project>
+      <Name>JournalismModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
