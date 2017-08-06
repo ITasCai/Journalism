@@ -106,7 +106,14 @@ namespace journalismBLL
         {
             return NewsService.GetNewsContent(n);
         }
-
+        /// <summary>
+        /// 查询所有新闻内容
+        /// </summary>
+        /// <returns></returns>
+        public static List<News> GetNewsShow()
+        {
+            return NewsService.GetNewsShow();
+        }
 
         }
 }

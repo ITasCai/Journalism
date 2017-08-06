@@ -136,18 +136,7 @@
     </script>
 
 
-    <script>
-        $(function () {
-            $("#atr a").click(function () {
-
-                alert($(this).text());
-                var lx = $(this).text();
-                window.location.href = "index1.html";
-                localstorage.setitem("value", lx);
-
-            })
-        })
-    </script>
+   
 
 
 
@@ -163,7 +152,18 @@
 
 
 
+    <script>
+        $(function () {
+            $("#atr a").click(function () {
+               
+                var value = $(this).text();
+                alert(value);
+                window.location.href = "index1.html";
+                localStorage.setItem("value", value);
 
+            })
+        })
+    </script>
 
 
 </head>
@@ -202,7 +202,7 @@
                     <span id="ctl00_head_dateLabel" style="color: #FFFFFF">今天是：2017年08月03日</span>
                 </td>
                 <td class="td2 ">
-                    <a id="na" href="" style="color:Black;text-decoration:none;font-weight: 800; color: #FFFFFF;" >首页</a>
+                    <a id="na" href="" style="color:Black;text-decoration:none;font-weight: 800; color: #FFFFFF;" >主页</a>
                 </td>
                 <td class="td2 ">
                     <a id="ct2" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">时事新闻</a>

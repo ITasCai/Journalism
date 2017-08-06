@@ -3,6 +3,22 @@
 <HEAD>
 <TITLE>Untitled Page</TITLE>
 <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            $.post(
+      "../ashx/GetNewsShow.ashx",
+   {
+   },
+   function (data, status) {
+       if (status == "success") {
+           alert(data);
+           $(".gridView").html(data)
+       }
+   }
+   )
+        })
+    </script>
 <STYLE type=text/css> 
 {
 	FONT-SIZE: 12px
@@ -45,7 +61,7 @@ function __doPostBack(eventTarget, eventArgument) {
 <SCRIPT src="EmployeeMgr.files/WebResource.axd" type=text/javascript></SCRIPT>
 <SCRIPT src="EmployeeMgr.files/ScriptResource.axd" 
 type=text/javascript></SCRIPT>
-<DIV>
+<DIV >
   <TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
     <TBODY>
       <TR 
@@ -55,7 +71,7 @@ type=text/javascript></SCRIPT>
       style="FLOAT: left; BACKGROUND-IMAGE: url(../images/main_hl.gif); WIDTH: 15px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 47px"></SPAN></TD>
         <TD><SPAN 
       style="FLOAT: left; BACKGROUND-IMAGE: url(../images/main_hl2.gif); WIDTH: 15px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 47px"></SPAN><SPAN 
-      style="PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FLOAT: left; BACKGROUND-IMAGE: url(../images/main_hb.gif); PADDING-BOTTOM: 10px; COLOR: white; PADDING-TOP: 10px; BACKGROUND-REPEAT: repeat-x; HEIGHT: 47px; TEXT-ALIGN: center; 0px: ">员工管理 </SPAN><SPAN 
+      style="PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FLOAT: left; BACKGROUND-IMAGE: url(../images/main_hb.gif); PADDING-BOTTOM: 10px; COLOR: white; PADDING-TOP: 10px; BACKGROUND-REPEAT: repeat-x; HEIGHT: 47px; TEXT-ALIGN: center; 0px: ">新闻管理 </SPAN><SPAN 
       style="FLOAT: left; BACKGROUND-IMAGE: url(../images/main_hr.gif); WIDTH: 60px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 47px"></SPAN></TD>
         <TD 
     style="BACKGROUND-POSITION: 50% bottom; BACKGROUND-IMAGE: url(../images/main_rc.gif)" 
@@ -66,88 +82,93 @@ type=text/javascript></SCRIPT>
         <TD 
     style="PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; COLOR: #566984; PADDING-TOP: 10px; BACKGROUND-COLOR: white" 
     vAlign=top align=middle>
-          <DIV>
-            <TABLE class=gridView id=ctl00_ContentPlaceHolder2_GridView1 
-      style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 rules=all 
-      border=1>
-              <TBODY>
-                <TR>
-                  <TH class=gridViewHeader style="WIDTH: 50px" scope=col>&nbsp;</TH>
-                  <TH class=gridViewHeader scope=col>Id</TH>
-                  <TH class=gridViewHeader scope=col>新闻标题</TH>
-                  <TH class=gridViewHeader scope=col>新闻类别</TH>
-                  <TH class=gridViewHeader scope=col>发布时间</TH>
-                  <TH class=gridviewHeader scope=col>详情</TH>
-                  <TH class=gridviewHeader scope=col>更新</TH>
-                  <TH class=gridviewHeader scope=col>删除</TH>
-                </TR>
-                <TR>
-                  <TD class=gridViewItem style="WIDTH: 50px"><IMG 
-            src="EmployeeMgr.files/bg_users.gif"> </TD>
-                  <TD class=gridViewItem>1</TD>
-                  <TD class=gridViewItem>1111</TD>
-                  <TD class=gridViewItem>1111</TD>
-                  <TD class=gridViewItem>1111</TD>
-                  <TD class=gridViewItem><A class=cmdField 
-            href="http://localhost:1479/Web/sys/EmployeeDetails.aspx?userId=admin">查看详情</A></TD>
-                  <TD class=gridViewItem><A class=cmdField 
-            href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$GridView1','Edit$0')">编辑</A></TD>
-                  <TD class=gridViewItem><A class=cmdField 
-            id=ctl00_ContentPlaceHolder2_GridView1_ctl02_LinkButton1 
-            onclick="return confirm('确定要删除吗？');" 
-            href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$GridView1$ctl02$LinkButton1','')">删除</A> </TD>
-                </TR>
-                <TR>
-                  <TD class=gridViewItem style="WIDTH: 50px"><IMG 
-            src="EmployeeMgr.files/bg_users.gif"> </TD>
-                  <TD class=gridViewItem>lili</TD>
-                  <TD class=gridViewItem>lili</TD>
-                  <TD class=gridViewItem>lili</TD>
-                  <TD class=gridViewItem>2</TD>
-                  <TD class=gridViewItem><A class=cmdField 
-            href="http://localhost:1479/Web/sys/EmployeeDetails.aspx?userId=lili">查看详情</A></TD>
-                  <TD class=gridViewItem><A class=cmdField 
-            href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$GridView1','Edit$1')">编辑</A></TD>
-                  <TD class=gridViewItem><A class=cmdField 
-            id=ctl00_ContentPlaceHolder2_GridView1_ctl03_LinkButton1 
-            onclick="return confirm('确定要删除吗？');" 
-            href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$GridView1$ctl03$LinkButton1','')">删除</A> </TD>
-                </TR>
-                <TR>
-                  <TD class=gridViewItem style="WIDTH: 50px"><IMG 
-            src="EmployeeMgr.files/bg_users.gif"> </TD>
-                  <TD class=gridViewItem>liwei</TD>
-                  <TD class=gridViewItem>liwei</TD>
-                  <TD class=gridViewItem>liwei</TD>
-                  <TD class=gridViewItem>2</TD>
-                  <TD class=gridViewItem><A class=cmdField 
-            href="http://localhost:1479/Web/sys/EmployeeDetails.aspx?userId=liwei">查看详情</A></TD>
-                  <TD class=gridViewItem><A class=cmdField 
-            href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$GridView1','Edit$2')">编辑</A></TD>
-                  <TD class=gridViewItem><A class=cmdField 
-            id=ctl00_ContentPlaceHolder2_GridView1_ctl04_LinkButton1 
-            onclick="return confirm('确定要删除吗？');" 
-            href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$GridView1$ctl04$LinkButton1','')">删除</A> </TD>
-                </TR>
-                <TR>
-                  <TD class=gridViewItem style="WIDTH: 50px"><IMG 
-            src="EmployeeMgr.files/bg_users.gif"> </TD>
-                  <TD class=gridViewItem>ljs</TD>
-                  <TD class=gridViewItem>ljs</TD>
-                  <TD class=gridViewItem>ljs</TD>
-                  <TD class=gridViewItem>2</TD>
-                  <TD class=gridViewItem><A class=cmdField 
-            href="http://localhost:1479/Web/sys/EmployeeDetails.aspx?userId=ljs">查看详情</A></TD>
-                  <TD class=gridViewItem><A class=cmdField 
-            href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$GridView1','Edit$3')">编辑</A></TD>
-                  <TD class=gridViewItem><A class=cmdField 
-            id=ctl00_ContentPlaceHolder2_GridView1_ctl05_LinkButton1 
-            onclick="return confirm('确定要删除吗？');" 
-            href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$GridView1$ctl05$LinkButton1','')">删除</A> </TD>
-                </TR>
-              </TBODY>
-            </TABLE>
-          </DIV>
+            
+                <DIV style="height:400px;overflow-y:scroll;">
+
+                    <TABLE class=gridView id=ctl00_ContentPlaceHolder2_GridView1
+                           style="overflow:auto; WIDTH: 100%; BORDER-COLLAPSE: collapse " cellSpacing=0 rules=all
+                           border=1>
+                        <!--<TBODY>
+                    <TR>
+                      <TH class=gridViewHeader style="WIDTH: 50px" scope=col>&nbsp;</TH>
+                      <TH class=gridViewHeader scope=col>Id</TH>
+                      <TH class=gridViewHeader scope=col>新闻标题</TH>
+                      <TH class=gridViewHeader scope=col>新闻类别</TH>
+                      <TH class=gridViewHeader scope=col>发布时间</TH>
+                      <TH class=gridviewHeader scope=col>详情</TH>
+                      <TH class=gridviewHeader scope=col>更新</TH>
+                      <TH class=gridviewHeader scope=col>删除</TH>
+                    </TR>
+
+                    <tr>
+                      <td class=gridviewitem style="width: 50px"><img
+                src="employeemgr.files/bg_users.gif"> </td>
+                      <td class=gridviewitem>1</td>
+                      <td class=gridviewitem>1111</td>
+                      <td class=gridviewitem>1111</td>
+                      <td class=gridviewitem>1111</td>
+                      <td class=gridviewitem><a class=cmdfield
+                href="http://localhost:1479/web/sys/employeedetails.aspx?userid=admin">查看详情</a></td>
+                      <td class=gridviewitem><a class=cmdfield
+                href="javascript:__dopostback('ctl00$contentplaceholder2$gridview1','edit$0')">编辑</a></td>
+                      <td class=gridviewitem><a class=cmdfield
+                id=ctl00_contentplaceholder2_gridview1_ctl02_linkbutton1
+                onclick="return confirm('确定要删除吗？');"
+                href="javascript:__dopostback('ctl00$contentplaceholder2$gridview1$ctl02$linkbutton1','')">删除</a> </td>
+                    </tr>
+                    <tr>
+                      <td class=gridviewitem style="width: 50px"><img
+                src="employeemgr.files/bg_users.gif"> </td>
+                      <td class=gridviewitem>lili</td>
+                      <td class=gridviewitem>lili</td>
+                      <td class=gridviewitem>lili</td>
+                      <td class=gridviewitem>2</td>
+                      <td class=gridviewitem><a class=cmdfield
+                href="http://localhost:1479/web/sys/employeedetails.aspx?userid=lili">查看详情</a></td>
+                      <td class=gridviewitem><a class=cmdfield
+                href="javascript:__dopostback('ctl00$contentplaceholder2$gridview1','edit$1')">编辑</a></td>
+                      <td class=gridviewitem><a class=cmdfield
+                id=ctl00_contentplaceholder2_gridview1_ctl03_linkbutton1
+                onclick="return confirm('确定要删除吗？');"
+                href="javascript:__dopostback('ctl00$contentplaceholder2$gridview1$ctl03$linkbutton1','')">删除</a> </td>
+                    </tr>
+                    <tr>
+                      <td class=gridviewitem style="width: 50px"><img
+                src="employeemgr.files/bg_users.gif"> </td>
+                      <td class=gridviewitem>liwei</td>
+                      <td class=gridviewitem>liwei</td>
+                      <td class=gridviewitem>liwei</td>
+                      <td class=gridviewitem>2</td>
+                      <td class=gridviewitem><a class=cmdfield
+                href="http://localhost:1479/web/sys/employeedetails.aspx?userid=liwei">查看详情</a></td>
+                      <td class=gridviewitem><a class=cmdfield
+                href="javascript:__dopostback('ctl00$contentplaceholder2$gridview1','edit$2')">编辑</a></td>
+                      <td class=gridviewitem><a class=cmdfield
+                id=ctl00_contentplaceholder2_gridview1_ctl04_linkbutton1
+                onclick="return confirm('确定要删除吗？');"
+                href="javascript:__dopostback('ctl00$contentplaceholder2$gridview1$ctl04$linkbutton1','')">删除</a> </td>
+                    </tr>
+                    <tr>
+                      <td class=gridviewitem style="width: 50px"><img
+                src="employeemgr.files/bg_users.gif"> </td>
+                      <td class=gridviewitem>ljs</td>
+                      <td class=gridviewitem>ljs</td>
+                      <td class=gridviewitem>ljs</td>
+                      <td class=gridviewitem>2</td>
+                      <td class=gridviewitem><a class=cmdfield
+                href="http://localhost:1479/web/sys/employeedetails.aspx?userid=ljs">查看详情</a></td>
+                      <td class=gridviewitem><a class=cmdfield
+                href="javascript:__dopostback('ctl00$contentplaceholder2$gridview1','edit$3')">编辑</a></td>
+                      <td class=gridviewitem><a class=cmdfield
+                id=ctl00_contentplaceholder2_gridview1_ctl05_linkbutton1
+                onclick="return confirm('确定要删除吗？');"
+                href="javascript:__dopostback('ctl00$contentplaceholder2$gridview1$ctl05$linkbutton1','')">删除</a> </td>
+                    </tr>
+                  </tbody>-->
+                    </TABLE>
+
+                </DIV>
+           
         </TD>
         <TD style="BACKGROUND-IMAGE: url(../images/main_rs.gif)"></TD>
       </TR>

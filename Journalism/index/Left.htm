@@ -41,6 +41,7 @@ src="Left.files/bg_left_br.gif"></TD>
     </TR>
   </TBODY>
 </TABLE>
+    <script src="../scripts/jquery-3.1.1.js"></script>
 <SCRIPT type=text/javascript>
     var tree = null;
     var root = new TreeNode('系统菜单');
@@ -87,9 +88,10 @@ src="Left.files/bg_left_br.gif"></TD>
     fun24.add(fun26);
     root.add(fun24);
     var fun27 = new TreeNode('用户管理');
-    var fun28 = new TreeNode('添加用户', 'SignInOrOut.aspx', 'tree_node.gif', null, 'tree_node.gif', null);
+    var fun28 = new TreeNode('添加用户', '../backstage/UserAdd.html', 'tree_node.gif', null, 'tree_node.gif', null);
     fun27.add(fun28);
-    var fun29 = new TreeNode('管理用户', 'HistoryQuery.aspx', 'tree_node.gif', null, 'tree_node.gif', null);
+    var fun29 = new TreeNode('管理用户', '../backstage/NewsUserShow.html', 'tree_node.gif', null, 'tree_node.gif', null);
+    
     fun27.add(fun29);
     root.add(fun27);
     tree = new Tree(root); tree.show('menuTree')

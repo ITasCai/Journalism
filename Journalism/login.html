@@ -12,6 +12,7 @@
 
             $("#deglu").click(function () {
 
+
                 $.post(
                 "ashx/UserLogin.ashx",
                 {
@@ -21,28 +22,39 @@
 
                 function (data, status) {
                 
-                    alert($("#username").val());
+                    
                     if (status == "success") {
 
 
                         if (data == $("#username").val()) {
                             alert("登录成功");
-                            window.location.href = "background.htm";
 
-                        }
+                            var username = $("#username").val();
+                          
+                            localStorage.setItem("username", username);
 
-                    } else {
-                        alert("登录失败");
+                           window.location.href = "background.htm";
+
+                        } else {
+                            alert("登录失败");
+
+                    }
                     }
 
                 }
 
           );
+
+
+
             })
 
 
         })
     </script>
+
+
+
     <style type="text/css">
         body {
             position: relative;

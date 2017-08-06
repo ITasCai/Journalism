@@ -35,20 +35,28 @@
         $(function () {
             $("#atr a").click(function () {
             
-                alert($(this).text());
-                var lx = $(this).text();
-                var title = "";
-                window.location.href = "index1.html";
-                localStorage.setItem("value", lx);
-                localStorage.setItem("title", title);
-
-
                
+                var value = $(this).text();
+                var title = "";
+                alert(value);
+                window.location.href = "index1.html";
+                localStorage.setItem("value", value);
+                localStorage.setItem("title", title);
+   
+            })
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $('body').on('click', '#lbtnTitle', function () {
+                var bt = $(this).text();
+                window.location.href = "Content.html";
+                localStorage.setItem("value", bt);
             })
         })
     </script>
    
-
 </head>
 <body class="tempbody">
         <div class="tbody">
@@ -85,7 +93,7 @@
                         <span id="ctl00_head_dateLabel" style="color: #FFFFFF">今天是：2017年08月03日</span>
                     </td>
                     <td class="td2 ">
-                        <a id="na" href="index.html" style="color:Black;text-decoration:none;font-weight: 800; color: #FFFFFF;">首页</a>
+                        <a id="na" href="index.html" style="color:Black;text-decoration:none;font-weight: 800; color: #FFFFFF;">主页</a>
                     </td>
                     <td class="td2 ">
                         <a id="ct2" href="#" style="color:Black;text-decoration:none;font-weight: 700; color: #FFFFFF;">时事新闻</a>

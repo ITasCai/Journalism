@@ -95,6 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="background.htm" />
+    <Content Include="backstage\NewsUserShow.html" />
+    <Content Include="backstage\UserAdd.html" />
+    <Content Include="backstage\UserDelete.html" />
     <Content Include="Content.html" />
     <Content Include="Images\2.jpg" />
     <Content Include="Images\addNote.gif" />
@@ -216,6 +219,9 @@
     <Content Include="ashx\Top.ashx" />
     <Content Include="ashx\RevampPassword.ashx" />
     <Content Include="ashx\GetNewsContent.ashx" />
+    <Content Include="ashx\UserAdd.ashx" />
+    <Content Include="ashx\GetNewsShow.ashx" />
+    <Content Include="ashx\GetNewsUserShow.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -274,17 +280,26 @@
     <Compile Include="ashx\GetNewsScience.ashx.cs">
       <DependentUpon>GetNewsScience.ashx</DependentUpon>
     </Compile>
+    <Compile Include="ashx\GetNewsShow.ashx.cs">
+      <DependentUpon>GetNewsShow.ashx</DependentUpon>
+    </Compile>
     <Compile Include="ashx\GetNewsSports.ashx.cs">
       <DependentUpon>GetNewsSports.ashx</DependentUpon>
     </Compile>
     <Compile Include="ashx\GetNewsType.ashx.cs">
       <DependentUpon>GetNewsType.ashx</DependentUpon>
     </Compile>
+    <Compile Include="ashx\GetNewsUserShow.ashx.cs">
+      <DependentUpon>GetNewsUserShow.ashx</DependentUpon>
+    </Compile>
     <Compile Include="ashx\RevampPassword.ashx.cs">
       <DependentUpon>RevampPassword.ashx</DependentUpon>
     </Compile>
     <Compile Include="ashx\Top.ashx.cs">
       <DependentUpon>Top.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\UserAdd.ashx.cs">
+      <DependentUpon>UserAdd.ashx</DependentUpon>
     </Compile>
     <Compile Include="ashx\UserLogin.ashx.cs">
       <DependentUpon>UserLogin.ashx</DependentUpon>

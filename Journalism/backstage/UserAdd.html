@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            $("#btnadd").click(function () {
+                $.post(
+                "../ashx/UserAdd.ashx",
+                {
+                    Name: $("#username").val(),
+                    PassWord: $("#pass").val(),
+                    Date: $("#date").val()
+                },
+
+                function (data, status) {
+                    if (status == "success") {
+                        if (data > 0) {
+                            alert("添加成功");
+                            window.location.href = "../index/Top.htm";
+                        } else {
+                            alert("添加失败");
+                        }
+                    }
+                }
+          );
+            })
+
+            $("#btnno").click(function () {
+                window.location.href = "../index/Top.htm";
+            })
+           
+        })
+    </script>
+    <style>
+        #dshow {
+            width:680px;
+            height:400px;
+            margin:0 auto;
+            border:1px solid #000000;
+            border-radius:40px;
+            background-color:azure           
+        }
+
+        body {
+             background:url(../Images/bg.jpg)
+        }
+
+#btnadd,#btnno{
+	height: 50px;
+	width: 150px;
+	border-radius: 20px;
+	background-color: #00FFFF;
+	font-size: 15px;
+	position: relative;
+	left: 160px;
+	top: 30px;
+}
+
+[type='text']{
+	height: 25px;
+	width: 200px;
+	border-radius: 10px;
+}
+
+        [type='text'],span {
+            margin-right:160px;
+            margin-top:45px;
+        }
+span{
+	font-size: 18px;
+	font-family: "微软雅黑";
+	position: relative;
+	left: 85px;
+}
+       
+    </style>
+</head>
+<body>
+    <div id="dshow">
+
+        <span>请输入用户名:&nbsp;&nbsp;&nbsp;</span>
+        <input type="text" name="username" value="" placeholder="请输入用户名" id="username"/><br />
+        <span>请输入密码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <input type="text" name="pass" value="" placeholder="请输入密码" id="pass"/><br />
+        <span>请输入时间:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <input type="text" name="date" value="" placeholder="请输入时间" id="date"/><br />
+
+        <input type="button" name="btnadd" value="添加"  id="btnadd"/>
+        <input type="button" name="btnno" value="退出" id="btnno"/>
+    </div>
+</body>
+</html>

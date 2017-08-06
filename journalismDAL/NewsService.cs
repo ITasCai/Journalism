@@ -269,6 +269,30 @@ namespace journalismDAL
             return list;
         }
 
+        /// <summary>
+        /// 查询所有新闻内容
+        /// </summary>
+        /// <returns></returns>
+        public static List<News> GetNewsShow()
+        {
+            List<News> list = new List<News>();
+            string sql = "SELECT * FROM dbo.tb_News ";
+
+            SqlDataReader dr = SqlHelper.ExecuteReader(CommandType.Text, sql, null);
+
+            while (dr.Read())
+            {
+                News news = new News();
+                news.ID = Convert.ToInt32(dr["ID"]);
+                news.IssueDate = Convert.ToDateTime(dr["IssueDate"]);
+                news.Title = dr["Title"].ToString();
+                news.Content = dr["Content"].ToString();
+                news.Type = dr["Type"].ToString();
+                news.Categories = dr["Categories"].ToString();
+                list.Add(news);
+            }
+            return list;
+        }
 
     }
 }

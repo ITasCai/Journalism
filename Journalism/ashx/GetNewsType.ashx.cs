@@ -16,7 +16,7 @@ namespace Journalism.ashx
 
         public void ProcessRequest(HttpContext context)
         {
-            context.Response.ContentType = "text/plain";
+            context.Response.ContentType = "text/html";
             News n = new News();
             n.Title = context.Request["title"];
             n.Categories = context.Request["type"];

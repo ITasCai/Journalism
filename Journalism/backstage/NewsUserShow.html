@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            $.post(
+                "../ashx/GetNewsUserShow.ashx",
+                {
+                },
+                function (data, status) {
+                 if (status == "success") {
+
+                    $("#ta").html(data)
+                }
+            }
+        )
+    })
+    </script>
+    <style>
+        body {
+            background: url(../Images/bg.jpg);
+        }
+        #ta {
+            width:450px;
+            background-color:blanchedalmond;
+            border:1px solid #ffd800;
+            font-size:16px;
+            text-align:center;
+        }
+            #ta tr {
+                height:40px;
+            }
+            
+    </style>
+</head>
+<body>
+    <table border="1"  cellspacing="0" id="ta" align="center"></table>
+</body>
+</html>
